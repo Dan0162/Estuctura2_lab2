@@ -410,20 +410,4 @@ class BPlusTree {
 
         return node;
     }
-
-    public void printTree() {
-        printNode(root, 0);
-    }
-
-    private void printNode(BPlusTreeNode node, int level) {
-        System.out.println("Level " + level + ": " + node);
-        if (!node.isLeaf) {
-            for (BPlusTreeNode child : node.children) {
-                printNode(child, level + 1);
-            }
-        }
-    }
-    
-
-
 }
